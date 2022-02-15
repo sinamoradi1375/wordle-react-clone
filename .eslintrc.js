@@ -1,4 +1,8 @@
 module.exports = {
+  globals: {
+    React: true,
+    JSX: true,
+  },
   env: {
     browser: true,
     es2021: true,
@@ -27,6 +31,7 @@ module.exports = {
     'no-unused-vars': ['warn'],
     'react/react-in-jsx-scope': 'off',
     'import/extensions': 'off',
+    'react/require-default-props': 'off',
   },
   settings: {
     'import/resolver': {

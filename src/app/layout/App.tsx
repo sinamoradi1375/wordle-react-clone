@@ -1,5 +1,5 @@
 import Keyboard from '../../features/keyboard/Keyboard';
-import './app.module.scss';
+import './App.module.scss';
 
 function App() {
   return (

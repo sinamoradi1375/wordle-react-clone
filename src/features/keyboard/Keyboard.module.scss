@@ -1,0 +1,54 @@
+.keyboard {
+    display: grid;
+    grid-template-columns: repeat(20, minmax(auto, 1.25em));
+    grid-auto-rows: 3em ;
+    gap: .25em;
+    justify-content: center;
+}
+
+
+.key {
+    font-size: inherit;
+    grid-column: span 2;
+    border: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(var(--hue, 200), var(--saturation, 1%), calc(var(--lightness-offset, 0%) + var(--lightness, 51%)));
+    color: #fff;
+    fill: #fff;
+    text-transform: uppercase;
+    border-radius: .25em;
+    cursor: pointer;
+    user-select: none;
+
+    &:hover, &:focus {
+        --lightness-offset: 10%;
+    }
+
+   svg {
+        width: 1.75em;
+        height: 1.75em;
+    }
+}
+    
+.wrongKey {
+    --lightness: 23% !important;
+ }
+
+ .wrongLocationKey {
+    --hue: 49;
+    --saturation: 51%;
+    --lightness: 47%;  
+ }
+
+ .correctKey {
+    --hue: 115;
+    --saturation: 29%;
+    --lightness: 43%;  
+ }
+
+.largeKey {
+    grid-column: span 3;
+}
